@@ -13,7 +13,6 @@ func findRepeatedDnaSequences(_ s: String) -> [String] {
                }else if dict[String(array[index...index + 9])]! == 1{
                    
                     set.insert(String(array[index...index + 9]))
-                   
                }
             }
             else{
