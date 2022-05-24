@@ -1,34 +1,27 @@
 class Solution {
-        
-func removeDuplicates(_ nums: inout [Int]) -> Int {
-    guard nums.count > 1 else { return nums.count}
     
-    for (index, num) in nums.enumerated(){
-        
-         if index == 0{
-            nums.append(num)
-             nums.remove(at: 0)
-            continue
-        }
-        
-        if num == nums.last{
-            nums.remove(at: 0)
-            continue
-        }
-        else{
-            nums.append(num)
-            nums.remove(at: 0)
-        }
-        
-            
-        
-        
-    }
+func removeDuplicates(_ nums: inout [Int]) -> Int {
+      var currentNumber = 0
+    var counter = 0
+      
+      for (index,number) in nums.enumerated(){
+          
+          if index == 0{
+          currentNumber = number
+          }
+          
+          if number == currentNumber && index > 0{
+              nums.remove(at: index - counter)
+              counter += 1
+          }else{
+              currentNumber = number
+          }
+          
+      }
     
     return nums.count
-    }
+  }
 }
-
   //   let nu = NSOrderedSet(array: nums).array
   //   print(nu)
   // return nu.count
