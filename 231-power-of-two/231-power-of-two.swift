@@ -9,6 +9,9 @@ class Solution {
             if two == n{
                 return true
             }
+            else if two > n{
+                return false
+            }
         }
         
         return false
