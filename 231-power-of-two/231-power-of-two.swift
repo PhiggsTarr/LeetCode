@@ -1,6 +1,6 @@
 class Solution {
     func isPowerOfTwo(_ n: Int) -> Bool {
-         var n = Double(String("\(n).0"))!
+             var n = Double(String("\(n).0"))!
               guard n != 1 else { return true}
               guard n != 2 else { return true}
               
@@ -9,11 +9,12 @@ class Solution {
                   
                   if n / 2.0 >= 2.0 {
                       n = n / 2.0
-                    if n == 2.0{
-                      return true
-                  }
                   }else{
                       break
+                  }
+                  
+                    if n == 2.0{
+                      return true
                   }
                  
                   
