@@ -26,7 +26,6 @@ class Solution {
          var n = n
               guard n != 1 else { return true}
               guard n != 2 else { return true}
-              guard n % 2 == 0 else { return false}
               
               
               while n > 2{
