@@ -6,7 +6,7 @@ class Solution {
         var columnArray = [Int]()
         
         for numbers in matrix{
-            if Set(numbers).sorted() != sortedNumbers.sorted(){
+            if numbers.sorted() != sortedNumbers{
                 return false
             }
         }
@@ -17,7 +17,7 @@ class Solution {
                 columnArray.append(flat[index])
             }
            
-            if columnArray.sorted() != sortedNumbers.sorted(){
+            if columnArray.sorted() != sortedNumbers{
                 return false
             }
             columnArray.removeAll()
