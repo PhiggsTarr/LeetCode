@@ -1,12 +1,11 @@
 class Solution {
     func checkValid(_ matrix: [[Int]]) -> Bool {
         let matrixCount = matrix[0].count
-        let sortedNumbers = Array(1...matrixCount)
         let flat = matrix.flatMap{$0}
         var columnArray = [Int]()
         
         for numbers in matrix{
-            if numbers.sorted() != sortedNumbers{
+            if numbers.sorted() != Array(1...matrixCount){
                 return false
             }
         }
@@ -17,7 +16,7 @@ class Solution {
                 columnArray.append(flat[index])
             }
            
-            if columnArray.sorted() != sortedNumbers{
+            if columnArray.sorted() != Array(1...matrixCount){
                 return false
             }
             columnArray.removeAll()
